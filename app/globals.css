@@ -1,1 +1,43 @@
 @import 'tailwindcss';
+
+:root {
+  --primary-color: #d54a1e;
+  --secondary-color: #1ea9d5;
+  --black-color: #333333;
+  --white-color: #fff;
+  --menu-bg-color: rgba(51, 51, 51, 0.5);
+}
+
+html {
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-dmsans);
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+}
+
+body {
+  font-family: var(--font-abel);
+  font-size: 1em;
+  line-height: 1.5;
+  color: var(--black-color);
+}
+
+.menu-bg-color {
+  background-color: var(--menu-bg-color);
+}
+
+.hover-link-color {
+  &:hover {
+    color: var(--secondary-color);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  }
+}
