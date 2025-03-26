@@ -60,10 +60,3 @@ body {
 .menu-bg-color {
   background-color: var(--menu-bg-color);
 }
-
-.hover-link-color {
-  &:hover {
-    color: var(--secondary-color);
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
-  }
-}
