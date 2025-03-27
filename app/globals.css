@@ -1,12 +1,13 @@
 @import 'tailwindcss';
 
-:root {
-  --primary-color: #d54a1e;
-  --secondary-color: #1ea9d5;
-  --header-rgba-color: rgba(30, 169, 213, 0.5);
-  --black-color: #333333;
-  --white-color: #fff;
-  --menu-bg-color: rgba(51, 51, 51, 0.5);
+@theme {
+  --color-primary: #d54a1e;
+  --color-secondary: #1ea9d5;
+  --color-header: rgba(30, 169, 213, 0.5);
+  --color-black: #333333;
+  --color-white: #fff;
+  --color-menu: rgba(51, 51, 51, 0.5);
+  --text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 }
 
 html {
