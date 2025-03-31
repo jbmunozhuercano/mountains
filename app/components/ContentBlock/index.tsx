@@ -15,7 +15,12 @@ interface Block {
 
 export default function ContentBlock({block}: Block): JSX.Element {
   return (
-    <section id={block.id} className='py-12'>
+    <section
+      id={block.id}
+      className={
+        block.id === 'culture' ? 'py-12 bg-secondary text-white' : 'py-12'
+      }
+    >
       <Image
         className='mb-8'
         src={block.imgSrc}
