@@ -8,7 +8,7 @@ export default function Header(): ReactNode {
   return (
     <header className='relative flex flex-col justify-between items-center flex-wrap h-screen bg-[url("/img/header_sm.jpg")] bg-cover bg-center py-8'>
       <Nav />
-      <div className='absolute top-0 bottom-0 w-screen h-screen bg-header flex flex-col justify-between items-center py-8 px-4'>
+      <div className='absolute top-0 bottom-0 h-screen bg-header flex flex-col justify-between items-center py-8 px-4'>
         <Link href='#'>
           <Image
             src={logo}
