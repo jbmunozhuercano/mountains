@@ -16,7 +16,7 @@ export default function Nav(): ReactNode {
         <li>
           <Link
             className='py-2 px-4 transition hover:text-secondary hover:[text-shadow:var(--text-shadow)]'
-            href='#cultura'
+            href='#culture'
           >
             Cultura
           </Link>
