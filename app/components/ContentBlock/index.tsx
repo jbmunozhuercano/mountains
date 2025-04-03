@@ -46,7 +46,7 @@ export default function ContentBlock({block}: Block): JSX.Element {
               : 'lg:w-2/4 lg:px-8'
           }
         >
-          <h3 className='px-4 text-2xl md:text-4xl'>{block.title}</h3>
+          <h3 className='px-4 mb-4 text-2xl md:text-4xl'>{block.title}</h3>
           <p className='px-4 lg:text-lg'>{block.text}</p>
         </div>
       </div>

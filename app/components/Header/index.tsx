@@ -28,7 +28,7 @@ export default function Header(): JSX.Element {
             Llegamos
             <span className='text-primary font-bold block'>de lo más alto</span>
           </h1>
-          <p className='[text-shadow:var(--text-shadow)] md:ml-8 md:max-w-sm'>
+          <p className='[text-shadow:var(--text-shadow)] md:ml-8 md:max-w-sm lg:text-xl'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
             vel libero eu ipsum auctor aliquam. Vestibulum ante ipsum primis in
             faucibus orci luctus et ultrices posuere cubilia curae; Integer
