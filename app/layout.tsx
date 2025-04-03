@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='es'>
+    <html className='scroll-smooth text-base' lang='es'>
       <body
         id='top'
         className={`${dmSans.variable} ${abel.variable} antialiased`}
