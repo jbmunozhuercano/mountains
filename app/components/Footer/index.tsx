@@ -18,7 +18,7 @@ export default function Footer(): JSX.Element {
           className='mb-2'
         />
       </Link>
-      <p className='flex items-center gap-1'>
+      <p className='flex items-center gap-1 text-sm'>
         <FontAwesomeIcon icon={faCopyright} className='w-4' />
         Todos los derechos reservados
       </p>
