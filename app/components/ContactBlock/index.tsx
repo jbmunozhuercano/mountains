@@ -10,8 +10,8 @@ export default function ContactBlock(): JSX.Element {
           Mantente en
           <span className='text-secondary font-bold block'>Contacto</span>
         </h3>
-        <div>
-          <p className='mb-4'>
+        <div className='lg:w-96'>
+          <p className='mb-4 lg:text-lg'>
             Rellena nuestro formulario de newsletter, para recibir las últimas
             noticias.
           </p>
@@ -34,10 +34,12 @@ export default function ContactBlock(): JSX.Element {
                   className='text-white text-base w-8 block md:hidden'
                   size='lg'
                 />
-                <span className='hidden md:block'>Enviar</span>
+                <span className='hidden md:block uppercase font-bold'>
+                  Enviar
+                </span>
               </button>
             </div>
-            <label htmlFor='privacy' className='flex items-center'>
+            <label htmlFor='privacy' className='flex items-center text-sm'>
               <input
                 className='mr-1'
                 type='checkbox'
