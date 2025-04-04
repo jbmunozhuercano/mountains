@@ -28,7 +28,7 @@ export default function RootLayout({
     <html className='scroll-smooth text-base' lang='es'>
       <body
         id='top'
-        className={`${dmSans.variable} ${abel.variable} antialiased`}
+        className={`${dmSans.variable} ${abel.variable} antialiased max-w-[1920px] mx-auto bg-gray-100`}
       >
         {children}
       </body>

@@ -16,9 +16,9 @@ export default function ContactBlock(): JSX.Element {
             noticias.
           </p>
           <form action=''>
-            <div className='flex justify-center items-center mb-4'>
+            <div className='flex items-center mb-4 justify-start'>
               <input
-                className='bg-white text-black h-10 py-2 px-4 rounded-s-3xl w-4/5 shadow-[2px_2px_1px_rgba(0,0,0,0.25)] focus:outline-0 border-0'
+                className='bg-white text-black h-10 py-2 px-4 rounded-s-3xl w-4/5 shadow-[2px_2px_1px_rgba(0,0,0,0.25)] focus:outline-0 border-0 max-w-xs'
                 type='email'
                 name='email'
                 id='email'

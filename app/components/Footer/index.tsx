@@ -24,7 +24,7 @@ export default function Footer(): JSX.Element {
       </p>
       <Link
         href='#backTop'
-        className='text-white bg-menu p-3 fixed bottom-4 right-4 rounded-sm md:hidden'
+        className='text-white bg-menu p-3 fixed bottom-4 right-4 rounded-sm lg:hidden'
       >
         <FontAwesomeIcon icon={faAngleUp} className='w-4' />
       </Link>

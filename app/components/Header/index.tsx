@@ -8,7 +8,7 @@ export default function Header(): JSX.Element {
   return (
     <header
       id='backTop'
-      className='relative flex flex-col justify-between items-center flex-wrap h-screen bg-[url("/img/header_sm.jpg")] lg:bg-[url("/img/header_lg.jpg")] bg-cover bg-center py-8'
+      className='relative flex flex-col justify-between items-center flex-wrap h-screen bg-[url("/img/header_sm.jpg")] lg:bg-[url("/img/header_lg.jpg")] lg:max-h-[1080px] bg-cover bg-center py-8 overflow-hidden'
     >
       <Nav />
       <div className='absolute top-0 bottom-0 w-full h-screen bg-header flex flex-col justify-between items-center py-8 px-4 md:justify-center lg:pt-2'>

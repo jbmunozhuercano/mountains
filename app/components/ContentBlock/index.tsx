@@ -20,7 +20,7 @@ export default function ContentBlock({block}: Block): JSX.Element {
       className={
         block.id === 'culture'
           ? 'py-12 lg:py-36 bg-secondary text-white'
-          : 'py-12 lg:py-36'
+          : 'py-12 lg:py-36 bg-white text-black'
       }
     >
       <div className='lg:flex lg:justify-center lg:items-center md:max-w-2xl lg:max-w-5xl md:mx-auto'>
