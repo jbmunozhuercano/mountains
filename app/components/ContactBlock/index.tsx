@@ -1,8 +1,16 @@
-import {JSX} from 'react';
+'use client';
+import {JSX, useState} from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faEnvelopeCircleCheck} from '@fortawesome/free-solid-svg-icons';
 
 export default function ContactBlock(): JSX.Element {
+  const [email, setEmail] = useState(false);
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log('Formulario enviado');
+    e.currentTarget.reset();
+    setEmail(true);
+  };
   return (
     <section className='py-12 px-4 bg-primary text-white lg:py-16'>
       <div className='md:w-2xl md:mx-auto lg:w-5xl lg:flex lg:justify-center'>
@@ -15,7 +23,7 @@ export default function ContactBlock(): JSX.Element {
             Rellena nuestro formulario de newsletter, para recibir las últimas
             noticias.
           </p>
-          <form action=''>
+          <form action='' onSubmit={handleSubmit}>
             <div className='flex items-center mb-4 justify-start'>
               <input
                 className='bg-white text-black h-10 py-2 px-4 rounded-s-3xl w-4/5 shadow-[2px_2px_1px_rgba(0,0,0,0.25)] focus:outline-0 border-0 max-w-xs'
@@ -27,17 +35,20 @@ export default function ContactBlock(): JSX.Element {
               />
               <button
                 type='submit'
-                className='bg-secondary flex justify-center items-center h-10 py-2 px-4 rounded-e-3xl w-1/5 shadow-[2px_2px_1px_rgba(0,0,0,0.25)] cursor-pointer'
+                className='bg-secondary flex justify-center items-center h-10 py-2 px-4 rounded-e-3xl w-1/5 shadow-[2px_2px_1px_rgba(0,0,0,0.25)] cursor-pointer hover:bg-menu transition-all'
               >
                 <FontAwesomeIcon
                   icon={faEnvelopeCircleCheck}
-                  className='text-white text-base w-8 block md:hidden'
+                  className='text-white text-base w-8 block md:hidden lg:hidden'
                   size='lg'
+                  title='Enviar'
                 />
-                <span className='hidden md:block uppercase font-bold'>
-                  Enviar
-                </span>
               </button>
+            </div>
+            <div id='message' className={email ? 'block' : 'hidden'}>
+              <p className='mb-4 text-sm bg-green-600 color-white py-2 px-4 rounded-3xl'>
+                <strong>Mensaje enviado. Muchas gracias</strong>
+              </p>
             </div>
             <label htmlFor='privacy' className='flex items-center text-sm'>
               <input
