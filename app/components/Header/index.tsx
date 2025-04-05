@@ -23,7 +23,7 @@ export default function Header(): JSX.Element {
         className='relative flex flex-col justify-between items-center flex-wrap h-screen bg-[url("/img/header_sm.jpg")] lg:bg-[url("/img/header_lg.jpg")] lg:max-h-[1080px] bg-cover bg-center py-8 overflow-hidden'
       >
         <Nav />
-        <div className='absolute top-0 bottom-0 w-full h-screen bg-header flex flex-col justify-between items-center py-8 px-4 md:justify-center lg:pt-2'>
+        <div className='absolute top-0 bottom-0 w-full h-screen min-h-fit bg-header flex flex-col justify-between items-center py-8 px-4 md:justify-center lg:pt-2'>
           <Link href='#'>
             <Image
               src={logo}
@@ -35,7 +35,12 @@ export default function Header(): JSX.Element {
             />
           </Link>
 
-          <div className='text-white md:flex md:mb-36'>
+          <motion.div
+            initial={{y: 300, opacity: 0}}
+            animate={{y: 0, opacity: 1}}
+            transition={{duration: 0.75}}
+            className='text-white md:flex md:mb-36'
+          >
             <h1 className='text-3xl md:max-w-sm md:text-right md:text-5xl'>
               Llegamos
               <span className='text-primary font-bold block'>
@@ -52,7 +57,7 @@ export default function Header(): JSX.Element {
               ligula suscipit dictum. Integer ac fermentum nibh. Integer commodo
               interdum quam, in ullamcorper augue mollis quis.
             </p>
-          </div>
+          </motion.div>
         </div>
       </header>
     </>
