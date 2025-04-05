@@ -7,7 +7,7 @@ import logo from '../../../public/img/svg/logo.svg';
 
 export default function Footer(): JSX.Element {
   return (
-    <footer className='bg-secondary text-white py-4 flex flex-col justify-center items-center flex-col'>
+    <footer className='bg-secondary text-white py-4 flex flex-col justify-center items-center'>
       <Link href='#'>
         <Image
           src={logo}
