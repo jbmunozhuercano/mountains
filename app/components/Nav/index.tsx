@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Nav(): ReactNode {
   return (
-    <nav className='bg-menu fixed top-0 left-0 right-0 p-1 z-10 shadow-md lg:left-auto lg:bottom-0 lg:translate-x-[85%] transition-all lg:hover:translate-x-0'>
+    <nav className='bg-menu fixed top-0 left-0 right-0 p-1 z-10 shadow-md lg:left-auto lg:bottom-0 lg:translate-x-[85%] transition-all duration-500 lg:hover:translate-x-0'>
       <span className='uppercase font-bold text-white rotate-90 lg:block absolute top-3 left-[-10px] sm:hidden'>
         Menu
       </span>
