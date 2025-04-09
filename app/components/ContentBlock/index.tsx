@@ -1,5 +1,5 @@
 'use client';
-import {JSX, ReactNode, useState, useEffect} from 'react';
+import {JSX, ReactNode} from 'react';
 import {motion} from 'motion/react';
 import Image from 'next/image';
 
@@ -16,13 +16,6 @@ interface Block {
 }
 
 export default function ContentBlock({block}: Block): JSX.Element {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const direction = block.id === 'culture' ? 1 : -1;
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
-
   return (
     <section
       id={block.id}
