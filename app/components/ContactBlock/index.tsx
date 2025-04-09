@@ -10,6 +10,10 @@ export default function ContactBlock(): JSX.Element {
     console.log('Formulario enviado');
     e.currentTarget.reset();
     setEmail(true);
+
+    setTimeout(() => {
+      setEmail(false);
+    }, 5000);
   };
   return (
     <section className='py-12 px-4 bg-primary text-white lg:py-16'>
