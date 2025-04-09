@@ -1,5 +1,5 @@
 'use client';
-import {JSX, ReactNode} from 'react';
+import {JSX, ReactNode, useState, useEffect} from 'react';
 import {motion} from 'motion/react';
 import Image from 'next/image';
 
@@ -15,19 +15,13 @@ interface Block {
   block: ContentBlockProps;
 }
 
-const variants = {
-  hidden: (direction: number) => ({
-    x: direction === 1 ? -100 : 100,
-    opacity: 0
-  }),
-  visible: {
-    x: 0,
-    opacity: 1
-  }
-};
-
 export default function ContentBlock({block}: Block): JSX.Element {
+  const [isLoaded, setIsLoaded] = useState(false);
   const direction = block.id === 'culture' ? 1 : -1;
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
 
   return (
     <section
@@ -39,12 +33,10 @@ export default function ContentBlock({block}: Block): JSX.Element {
       }
     >
       <motion.div
-        initial='hidden'
-        whileInView='visible'
+        initial={{opacity: 0}}
+        whileInView={{opacity: 1}}
         viewport={{once: true}}
-        variants={variants}
-        custom={direction}
-        transition={{duration: 0.75}}
+        transition={{duration: 3}}
         className='lg:flex lg:justify-center lg:items-center md:max-w-2xl lg:max-w-5xl md:mx-auto'
       >
         <div
